@@ -7,7 +7,7 @@ import Todos from "./modules/todos/";
 function App() {
   return (
     <div style={{margin: "20px"}}>
-       <h4> React16 app from scratch </h4>
+       <h4>React16 typescript with jest and enzyme</h4>
         <br />
         <Todos />
     </div>
