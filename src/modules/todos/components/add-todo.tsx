@@ -6,22 +6,23 @@ export interface IAddTodo {
 
 const AddTodo: React.FC<IAddTodo> = (props) => {
   const { addToDoHandler } = props;
-  const newTodoTextRef = React.useRef<HTMLInputElement>(null);
+  const [todoText, setTodoText] = React.useState("")
 
   const addTodoSubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
-    if (newTodoTextRef.current!.value !== "") {
-      addToDoHandler(newTodoTextRef.current!.value);
+    if (todoText !== "") {
+      addToDoHandler(todoText);
+      setTodoText("");
     }
   }
   
   return (
     <div>
-      <p data-testid="add-new-label"><b>Add new Todo</b></p>
-      <form data-testid="add-todo-form" onSubmit={addTodoSubmitHandler}>
+      <p><b>Add new Todo</b></p>
+      <form id="add-todo-form" onSubmit={addTodoSubmitHandler}>
         <label htmlFor="new-todo">New todo</label>
-        <input type="text" data-testid="new-todo" ref={newTodoTextRef} />
-        <button data-testid="submit" type="submit">Add</button>
+        <input type="text" value={todoText} onChange={(e) => setTodoText(e.target.value)} />
+        <button id="add-todo-submit" type="submit">Add</button>
       </form>
     </div>
   )

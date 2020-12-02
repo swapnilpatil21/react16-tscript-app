@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddTodo /> should render correctly 1`] = `
+<div>
+  <p>
+    <b>
+      Add new Todo
+    </b>
+  </p>
+  <form
+    id="add-todo-form"
+    onSubmit={[Function]}
+  >
+    <label
+      htmlFor="new-todo"
+    >
+      New todo
+    </label>
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <button
+      id="add-todo-submit"
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+</div>
+`;

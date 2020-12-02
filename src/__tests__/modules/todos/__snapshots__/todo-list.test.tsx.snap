@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoList /> should render correctly 1`] = `
+<div>
+  <p>
+    <b>
+      TodoList
+    </b>
+  </p>
+  <ul>
+    <li
+      key="1"
+    >
+      text one
+       
+      <span>
+        <button
+          data-testid="Delete"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </span>
+    </li>
+    <li
+      key="2"
+    >
+      text two
+       
+      <span>
+        <button
+          data-testid="Delete"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<TodoList /> should render with empty list 1`] = `
+<div>
+  <p>
+    <b>
+      TodoList
+    </b>
+  </p>
+  <ul>
+    You don't have todo items
+  </ul>
+</div>
+`;
